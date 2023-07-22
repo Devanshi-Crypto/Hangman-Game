@@ -1,0 +1,22 @@
+{
+  "name": "hangman-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devanshi-Crypto/Hangman-Game.git"
+  },
+  "author": "Devanshi Doshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devanshi-Crypto/Hangman-Game/issues"
+  },
+  "homepage": "https://github.com/Devanshi-Crypto/Hangman-Game#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
+  }
+}
