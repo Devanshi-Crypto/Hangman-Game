@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #331D2C;
+}
+
+/* Add a wrapper div to center the game container */
+/* .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+} */
+
+.container {
+    width: 850px;    /* Set a maximum width to maintain the container's size on larger screens */
+    background: #EFE1D1;
+    display: flex;
+    align-items: flex-end;
+    /* flex-direction: column;    Adjust the flex direction to stack the elements */
+    gap: 70px;    /* Reduce the gap for smaller screens */
+    align-items: center;
+    padding: 60px 40px;    /* Reduce padding for smaller screens */
+    border-radius: 10px;
+    margin-top: 30px;        /* Add space at the top of the container */
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hangman-box img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+}
+
+.hangman-box h1 {
+    font-size: 1.2em;
+    /* Adjust font size for smaller screens */
+    margin-top: 15px;
+    /* Adjust margin for smaller screens */
+    text-align: center;
+    text-transform: uppercase;
+    color: #A78295;
+}
+
+.word-display {
+    display: flex;
+    gap: 5px;
+    /* Reduce the gap for smaller screens */
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow the word-display to wrap on smaller screens */
+}
+
+.word-display .letter {
+    width: 25px;    /* Adjust width for smaller screens */
+    font-size: 1.5rem;    /* Adjust font size for smaller screens */
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    /* Adjust margin for smaller screens */
+    border-bottom: 2px solid #3F2E3E;
+}
+
+.word-display .letter .guessed {
+    border-color: transparent;
+    margin: -20px 0 -18px;   /* Adjust margin for smaller screens */
+}
+
+.game-box h4{
+    text-align: center;
+    font-size: 1.1rem;    /* Adjust font size for smaller screens */
+    font-weight: 500;
+    margin-bottom: 15px;    /* Adjust margin for smaller screens */
+}
+
+.game-box h4 b{
+    font-weight: 600;
+}
+
+.game-box .guess-text b{
+    color: red;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.game-box .keyboard {
+    /* display:flex; */
+    gap: 5px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+:where(.game-model,.keyboard) button {
+        cursor: pointer;
+        padding: 7px;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+}
+.keyboard button{
+    color: #A78295;
+}
+.row1,.row2,.row3{
+    margin-bottom: 3.5px;
+}
+button:hover{
+    background-color:#3F2E3E;
+    color:#EFE1D1
+}
+.row2{
+    margin-left: 17px;
+}
+.row3{
+    margin-left: 49px;
+}
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.15em solid #3F2E3E;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
+}
+.game-model {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display: none;
+    align-items: center;
+    justify-content:center;
+}
+.game-model .content{
+    background-color:#A78295;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius:10px;
+    padding: 30px;
+}
+.game-model img {
+    max-width: 130px;
+}
+.game-model h4{
+    font-size: 1.53rem;
+}
+.game-model p{
+    font-size: 1.15rem;
+    margin:15px 0 30px;
+    font-weight: 500;
+}
+.game-model p b {
+    color:#EFE1D1;
+    font-weight: 600;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #A78295;
+    }
+}

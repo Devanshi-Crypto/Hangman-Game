@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-model">
+        <div class="content">
+            <img src="images/lost.gif" alt="lost">
+            <h4>Game Over!</h4>
+            <p>The correct word was: <b></b></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+    <!-- <div class="wrapper"> -->
+        <div class="container">
+            <div class="hangman-box">
+                <br>
+                <img src="images/hangman-0.svg" alt="hangman-img-0">
+                <br>
+                <br>
+                <div class="typewriter">
+                    <h1>HangMan Game</h1>
+                </div>
+            </div>
+            <div class="game-box">
+                <ul class="word-display">
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                    <li class="letter"></li>
+                </ul>
+                <h4 class="hint-text">
+                    Hint: <b></b>
+                </h4>
+                <h4 class="guess-text">
+                    Incorrect Guesses: <b>0/6</b>
+                </h4>
+                <div class="keyboard">
+                    <div class="row1">
+                        <button class="keys">Q</button> <button class="keys">W</button>
+                        <button class="keys">E</button> <button class="keys">R</button>
+                        <button class="keys">T</button> <button class="keys">Y</button>
+                        <button class="keys">U</button> <button class="keys">I</button>
+                        <button class="keys">O</button> <button class="keys">P</button>
+                    </div>
+                    <div class="row2">
+                        <button class="keys">A</button> <button class="keys">S</button>
+                        <button class="keys">D</button> <button class="keys">F</button>
+                        <button class="keys">G</button> <button class="keys">H</button>
+                        <button class="keys">J</button> <button class="keys">K</button>
+                        <button class="keys">L</button>
+                    </div>
+                    <div class="row3">
+                        <button class="keys">Z</button>
+                        <button class="keys">X</button> <button class="keys">C</button>
+                        <button class="keys">V</button> <button class="keys">B</button>
+                        <button class="keys">N</button> <button class="keys">M</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    <!-- </div> -->
+</body>
+
+</html>
