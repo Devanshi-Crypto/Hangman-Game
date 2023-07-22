@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-
 }
+
 body {
     display: flex;
     align-items: center;
@@ -17,25 +17,29 @@ body {
 }
 
 /* Add a wrapper div to center the game container */
-/* .wrapper {
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    
-} */
+
+}
 
 .container {
-    width: 850px;    /* Set a maximum width to maintain the container's size on larger screens */
+    width: 850px;
+    /* Set a maximum width to maintain the container's size on larger screens */
     background: #EFE1D1;
     display: flex;
     align-items: flex-end;
     /* flex-direction: column;    Adjust the flex direction to stack the elements */
-    gap: 70px;    /* Reduce the gap for smaller screens */
+    gap: 70px;
+    /* Reduce the gap for smaller screens */
     align-items: center;
-    padding: 60px 40px;    /* Reduce padding for smaller screens */
+    padding: 60px 40px;
+    /* Reduce padding for smaller screens */
     border-radius: 10px;
-    margin-top: 30px;        /* Add space at the top of the container */
+    margin-top: 30px;
+    /* Add space at the top of the container */
     margin-bottom: 30px;
     margin-left: 10px;
     margin-right: 10px;
@@ -68,8 +72,10 @@ body {
 }
 
 .word-display .letter {
-    width: 25px;    /* Adjust width for smaller screens */
-    font-size: 1.5rem;    /* Adjust font size for smaller screens */
+    width: 25px;
+    /* Adjust width for smaller screens */
+    font-size: 1.5rem;
+    /* Adjust font size for smaller screens */
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
@@ -80,59 +86,72 @@ body {
 
 .word-display .letter .guessed {
     border-color: transparent;
-    margin: -20px 0 -18px;   /* Adjust margin for smaller screens */
+    margin: -20px 0 -18px;
+    /* Adjust margin for smaller screens */
 }
 
-.game-box h4{
+.game-box h4 {
     text-align: center;
-    font-size: 1.1rem;    /* Adjust font size for smaller screens */
+    font-size: 1.1rem;
+    /* Adjust font size for smaller screens */
     font-weight: 500;
-    margin-bottom: 15px;    /* Adjust margin for smaller screens */
+    margin-bottom: 15px;
+    /* Adjust margin for smaller screens */
 }
 
-.game-box h4 b{
+.game-box h4 b {
     font-weight: 600;
 }
 
-.game-box .guess-text b{
+.game-box .guess-text b {
     color: red;
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .game-box .keyboard {
     /* display:flex; */
     gap: 5px;
     margin-top: 40px;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
 }
-:where(.game-model,.keyboard) button {
-        cursor: pointer;
-        padding: 7px;
-        border: none;
-        border-radius: 4px;
-        outline: none;
-        font-size: 1rem;
-        font-weight: 600;
-        text-transform: uppercase;
+
+:where(.game-model, .keyboard) button {
+    cursor: pointer;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-.keyboard button{
+
+.keyboard button {
     color: #A78295;
 }
-.row1,.row2,.row3{
+
+.row1,
+.row2,
+.row3 {
     margin-bottom: 3.5px;
 }
-button:hover{
-    background-color:#3F2E3E;
-    color:#EFE1D1
+
+button:hover {
+    background-color: #3F2E3E;
+    color: #EFE1D1
 }
-.row2{
+
+.row2 {
     margin-left: 17px;
 }
-.row3{
+
+.row3 {
     margin-left: 49px;
 }
+
 .typewriter h1 {
     overflow: hidden;
     border-right: 0.15em solid #3F2E3E;
@@ -141,37 +160,43 @@ button:hover{
     letter-spacing: 0.15em;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end;
 }
+
 .game-model {
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     display: none;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
-.game-model .content{
-    background-color:#A78295;
+
+.game-model .content {
+    background-color: #A78295;
     max-width: 420px;
     width: 100%;
     text-align: center;
-    border-radius:10px;
+    border-radius: 10px;
     padding: 30px;
 }
+
 .game-model img {
     max-width: 130px;
 }
-.game-model h4{
+
+.game-model h4 {
     font-size: 1.53rem;
 }
-.game-model p{
+
+.game-model p {
     font-size: 1.15rem;
-    margin:15px 0 30px;
+    margin: 15px 0 30px;
     font-weight: 500;
 }
+
 .game-model p b {
-    color:#EFE1D1;
+    color: #EFE1D1;
     font-weight: 600;
 }
 
@@ -194,5 +219,163 @@ button:hover{
 
     50% {
         border-color: #A78295;
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .word-display .letter {
+        width: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .game-box h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .typewriter h1 {
+        font-size: 1.2rem;
+    }
+
+    .game-model .content {
+        max-width: 300px;
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .game-box .keyboard {
+        margin-top: 20px;
+    }
+
+    .row1,
+    .row2,
+    .row3 {
+        margin-bottom: 2px;
+    }
+
+    .row2 {
+        margin-left: 10px;
+    }
+
+    .row3 {
+        margin-left: 30px;
+    }
+
+    .game-model .content {
+        max-width: 250px;
+        padding: 20px;
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+}
+
+/* Additional media queries for larger screens if necessary */
+
+/* Styles for screens smaller than 380px */
+@media screen and (max-width: 380px) {
+    .container {
+        padding: 20px;
+    }
+
+    .game-box .keyboard {
+        gap: 3px;
+        margin-top: 15px;
+    }
+
+    .row1,
+    .row2,
+    .row3 {
+        margin-bottom: 1px;
+    }
+
+    .row2 {
+        margin-left: 5px;
+    }
+
+    .row3 {
+        margin-left: 20px;
+    }
+
+    .game-box h4 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .word-display .letter {
+        width: 18px;
+        font-size: 1rem;
+        margin-bottom: 3px;
+    }
+
+    .typewriter h1 {
+        font-size: 1rem;
+    }
+
+    .game-model .content {
+        max-width: 200px;
+        padding: 15px;
+    }
+}
+
+/* Styles for screens smaller than 320px */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 15px;
+    }
+
+    .game-box .keyboard {
+        gap: 2px;
+        margin-top: 10px;
+    }
+
+    .row1,
+    .row2,
+    .row3 {
+        margin-bottom: 1px;
+    }
+
+    .row2 {
+        margin-left: 2px;
+    }
+
+    .row3 {
+        margin-left: 10px;
+    }
+
+    .game-box h4 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .word-display .letter {
+        width: 16px;
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+
+    .typewriter h1 {
+        font-size: 0.9rem;
+    }
+
+    .game-model .content {
+        max-width: 180px;
+        padding: 10px;
     }
 }
